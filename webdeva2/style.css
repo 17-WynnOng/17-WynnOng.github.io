@@ -21,6 +21,19 @@ header h1 {
     color: white;
 }
 
+.qrCode {
+    position: absolute;
+    top: 10px; /* Adjust position as needed */
+    right: 10px; /* Adjust position as needed */
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+}
+
+.qrCode img {
+    width: 100%;
+    height: auto;
+}
+
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -217,16 +230,18 @@ p {
 
 #game-container {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns */
+    gap: 10px; /* Adjust gap if needed */
     width: 100%;
     margin: 0 auto;
     height: auto;
 }
 
 .card {
-    width: 100px;
-    height: 100px;
+    width: 20vw; /* Adjust as needed */
+    height: 20vw; /* Adjust as needed */
+    max-width: 200px; /* Ensure the cards don't get too large */
+    max-height: 200px; /* Ensure the cards don't get too large */
     background-color: #ff0000;
     display: flex;
     align-items: center;
@@ -234,7 +249,6 @@ p {
     font-size: 24px;
     cursor: pointer;
 }
-
 .card.flipped .card-image {
     background-color: #fff;
 }
